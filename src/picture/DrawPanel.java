@@ -20,11 +20,9 @@ public class DrawPanel extends JPanel {
     private List<Tree> trees = new ArrayList<>();
     private int treesCount = 8;
     private List<Cloud> clouds = new ArrayList<>();
-    private int cloudsCount = 8;
+    private int cloudsCount = 6;
     private Grass grass = new Grass(0,817,3000,30);
     List<GrassBlade> grasses = grass.generateGrass();
-//    private Mountains mountain = new Mountains(500,6,3000);
-//    private List<Mountain> mountains = mountain.generateMountains();
     private List<Mountain> mountains = new ArrayList<>();
     private int numberOfMountains = 10;
     public DrawPanel() {
