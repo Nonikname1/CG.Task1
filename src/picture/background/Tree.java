@@ -5,15 +5,13 @@ import java.awt.*;
 public class Tree {
     private int x, y, height, width;
     private Color color;
-    private boolean isRound;
 
-    public Tree(int x, int y, int height, int width, Color color, boolean isRound) {
+    public Tree(int x, int y, int height, int width, Color color) {
         this.x = x;
         this.y = y;
         this.height = height;
         this.width = width;
         this.color = color;
-        this.isRound = isRound;
     }
 
     public int getHeight() {
@@ -40,14 +38,6 @@ public class Tree {
         this.color = color;
     }
 
-    public boolean isRound() {
-        return isRound;
-    }
-
-    public void setRound(boolean round) {
-        isRound = round;
-    }
-
     public int getX() {
         return x;
     }
@@ -69,5 +59,16 @@ public class Tree {
         g.fillRect(x + width / 2 - width / 8, y + height / 5 * 3 - 5, width / 4, height / 5 * 2);
         g.setColor(color);
         g.fillOval(x, y, width, height / 5 * 3);
+    }
+
+    public void move(int u) {
+        this.x = x - u;
+    }
+
+    public boolean isEnd() {
+        if (x < -width) {
+            return true;
+        }
+        return false;
     }
 }

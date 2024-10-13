@@ -51,4 +51,15 @@ public class Cloud {
         g.fillOval(x + width / 2, y + height / 3, width, height);
         g.fillOval(x, y + height / 2, width, height);
     }
+
+    public void move(int u) {
+        this.x = x - u;
+    }
+
+    public boolean isEnd() {
+        if (x < -width - width / 2) {
+            return true;
+        }
+        return false;
+    }
 }

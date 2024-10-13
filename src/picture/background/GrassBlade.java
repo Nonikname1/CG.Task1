@@ -1,4 +1,4 @@
-package picture;
+package picture.background;
 
 import java.awt.*;
 

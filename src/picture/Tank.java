@@ -97,6 +97,9 @@ public class Tank {
         int[] yPoints = {mainY, mainY, mainY + mainH, mainY + mainH};
         g.fillPolygon(xPoints, yPoints, 4);
         boxHull(g, mainX + mainW / 4, mainY, (int) (mainW * 0.2), (int) (mainH * 0.4));
+        /*g.setPaint(new Color(0xFFFFFF));
+        g.setFont(new Font("Calibri", Font.BOLD, 36));
+        g.drawString("ZOV", mainX + mainW / 3 * 2, mainY + mainH / 5 * 3);*/
     }
 
     private void boxHull(Graphics2D g, int x, int y, int w, int h) {
@@ -135,6 +138,7 @@ public class Tank {
         for (Bullet bullet : bullets) {
             bullet.draw(g);
         }
+
     }
     public void shoot() {
         Bullet bullet = new Bullet(x + 753, y + 213);
